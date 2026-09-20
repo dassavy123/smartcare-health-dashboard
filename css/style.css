@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(96, 182, 159, 0.808);
+    color: black;
+}
+
+header {
+    background-color: rgb(39, 226, 233);
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e7eb;
+    border: radius 6px;
+    border-color: black;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 5px;
+    color: #032121;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo p {
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+#doctorsList {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.doctor-card {
+    background-color: rgb(18, 161, 166);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    
+
+
+}

@@ -1,43 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SmartCare</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+    <!-- ================= HEADER ================= -->
+
     <header>
+
         <div class="logo">
-    <h1>SmartCare</h1>
-    </div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Doctors</a>
-        <a href="#">Nurses</a>
-        <a href="#">Appointments</a>
-    </nav>
-    <p>Find Your Medicos</p>
+            <h1>SmartCare</h1>
+        </div>
+
+       <nav>
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#doctors" class="nav-link">Doctors</a>
+    <a href="#nurses" class="nav-link">Nurses</a>
+    <a href="#appointments" class="nav-link">Appointments</a>
+</nav>
+
+        <p>Find Your Medicos</p>
+
     </header>
 
 
-<main>
-    <section>
-<h2>Find Medicos</h2>
-<input
-type="text"
-id="medicosearch"
-placeholder="search medicos..."
->
-    </section>
-    <section>
-        <h2>Doctors</h2>
-        <div id="doctorsList">
-            <!--Doctors Cards will appear here -->
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+        <!-- Search Section -->
+
+        <section>
+
+            <h2>Find Medicos</h2>
+
+            <input
+                type="text"
+                id="medicosearch"
+                placeholder="Search medicos..."
+            >
+
+        </section>
+
+
+        <!-- Doctors Section -->
+
+        <section>
+
+            <h2>Doctors</h2>
+
+            <div id="doctorsList">
+
+                <!-- Doctor cards will appear here -->
+
+            </div>
+
+        </section>
+<!-- ================= NURSES ================= -->
+
+<section id="nurses">
+
+    <h2>Nurses</h2>
+
+    <div id="nursesList">
+        <!-- Nurse cards will appear here -->
+    </div>
+
+</section>
+
+<section id="appointments">
+
+    <h2>Appointments</h2>
+
+    <div id="appointmentsList">
+        <!-- Appointments will appear here -->
+    </div>
+
+</section>
+    </main>
+
+
+
+    <div id="appointmentModal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                id="closeModal"
+                class="close-button"
+                type="button"
+            >
+                &times;
+            </button>
+
+            <h2>Book Appointment</h2>
+
+            <!-- Selected Doctor -->
+
+            <div class="selected-doctor">
+
+                <h3 id="selectedDoctor">
+                    Doctor Name
+                </h3>
+
+                <p id="selectedSpecialization">
+                    Specialization
+                </p>
+
+            </div>
+
+
+            <!-- Appointment Form -->
+
+            <form id="appointmentForm">
+
+                <!-- Patient Name -->
+
+                <label for="patientName">
+                    Patient Name
+                </label>
+
+                <input
+                    type="text"
+                    id="patientName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <!-- Appointment Date -->
+
+                <label for="appointmentDate">
+                    Appointment Date
+                </label>
+
+                <input
+                    type="date"
+                    id="appointmentDate"
+                    required
+                >
+
+
+                <!-- Appointment Time -->
+
+                <label for="appointmentTime">
+                    Appointment Time
+                </label>
+
+                <select
+                    id="appointmentTime"
+                    required
+                >
+
+                    <option value="">
+                        Select time
+                    </option>
+
+                    <option value="09:00 AM">
+                        09:00 AM
+                    </option>
+
+                    <option value="10:00 AM">
+                        10:00 AM
+                    </option>
+
+                    <option value="11:00 AM">
+                        11:00 AM
+                    </option>
+
+                    <option value="12:00 PM">
+                        12:00 PM
+                    </option>
+
+                    <option value="02:00 PM">
+                        02:00 PM
+                    </option>
+
+                    <option value="03:00 PM">
+                        03:00 PM
+                    </option>
+
+                    <option value="04:00 PM">
+                        04:00 PM
+                    </option>
+
+                    <option value="05:00 PM">
+                        05:00 PM
+                    </option>
+
+                </select>
+
+
+                <!-- Confirm -->
+
+                <button
+                    type="submit"
+                    class="confirm-button"
+                >
+                    Confirm Appointment
+                </button>
+
+            </form>
 
         </div>
-    </section>
-</main>
-<script src="js/script.js"></script>
+
+    </div>
+
+
+
+
+    <div
+        id="successMessage"
+        class="success-message"
+    >
+
+        <div class="success-content">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Appointment Confirmed
+            </h2>
+
+            <p id="confirmationText">
+                Your appointment has been booked successfully.
+            </p>
+
+            <button
+                id="doneButton"
+                type="button"
+            >
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+
+    
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

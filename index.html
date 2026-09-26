@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SmartCare</title>
+    <title>SmartCare | Find Your Medicos</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,82 +14,543 @@
 
     <!-- ================= HEADER ================= -->
 
-    <header>
+    <header class="main-header">
 
         <div class="logo">
-            <h1>SmartCare</h1>
+
+            <div class="logo-icon">✚</div>
+
+            <div>
+                <h1>SmartCare</h1>
+                <span>Find Your Medicos</span>
+            </div>
+
         </div>
 
-       <nav>
-    <a href="#home" class="nav-link active">Home</a>
-    <a href="#doctors" class="nav-link">Doctors</a>
-    <a href="#nurses" class="nav-link">Nurses</a>
-    <a href="#appointments" class="nav-link">Appointments</a>
-</nav>
 
-        <p>Find Your Medicos</p>
+        <nav>
+
+            <a href="#home" class="nav-link active">
+                Home
+            </a>
+
+            <a href="#doctors" class="nav-link">
+                Doctors
+            </a>
+
+            <a href="#nurses" class="nav-link">
+                Nurses
+            </a>
+
+            <a href="#appointments" class="nav-link">
+                Appointments
+            </a>
+
+            <a href="#emergency" class="nav-link">
+                Emergency
+            </a>
+
+        </nav>
+
+
+        <button
+            class="header-button"
+            type="button"
+            onclick="document.getElementById('doctors').scrollIntoView({behavior:'smooth'})"
+        >
+            Find a Doctor
+        </button>
 
     </header>
 
 
-    <!-- ================= MAIN CONTENT ================= -->
+    <!-- ================= MAIN ================= -->
 
     <main>
 
-        <!-- Search Section -->
 
-        <section>
+        <!-- ================= HERO ================= -->
 
-            <h2>Find Medicos</h2>
+        <section id="home" class="hero-section">
 
-            <input
-                type="text"
-                id="medicosearch"
-                placeholder="Search medicos..."
-            >
+            <div class="hero-content">
 
-        </section>
+                <span class="hero-tag">
+                    🩺 Your Health, Our Priority
+                </span>
 
 
-        <!-- Doctors Section -->
+                <h2>
+                    Find the right doctor
+                    <span>for your health</span>
+                </h2>
 
-        <section>
 
-            <h2>Doctors</h2>
+                <p>
+                    Search for trusted doctors and nurses,
+                    check their availability, and book your
+                    appointment easily.
+                </p>
 
-            <div id="doctorsList">
 
-                <!-- Doctor cards will appear here -->
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="medicosearch"
+                        placeholder="Search doctor, specialization..."
+                    >
+
+                    <button
+                        id="searchButton"
+                        type="button"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>50+</strong>
+                        <span>Medical Professionals</span>
+                    </div>
+
+                    <div>
+                        <strong>20+</strong>
+                        <span>Specializations</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Healthcare Support</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <div class="hero-circle"></div>
+
+                <img
+                    src="assets/images/doctor-hero.png"
+                    alt="Healthcare professional"
+                    onerror="this.style.display='none'"
+                >
+
+
+                <div class="floating-card doctor-floating-card">
+
+                    <div class="floating-icon">
+                        👨‍⚕️
+                    </div>
+
+                    <div>
+                        <strong>Expert Doctors</strong>
+                        <span>Ready to help you</span>
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card appointment-floating-card">
+
+                    <div class="floating-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Easy Booking</strong>
+                        <span>Book in minutes</span>
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
-<!-- ================= NURSES ================= -->
 
-<section id="nurses">
 
-    <h2>Nurses</h2>
+        <!-- ================= QUICK ACTIONS ================= -->
 
-    <div id="nursesList">
-        <!-- Nurse cards will appear here -->
-    </div>
+        <section class="quick-actions-section">
 
-</section>
+            <div class="section-heading">
 
-<section id="appointments">
+                <span>QUICK ACCESS</span>
 
-    <h2>Appointments</h2>
+                <h2>
+                    How can we help you?
+                </h2>
 
-    <div id="appointmentsList">
-        <!-- Appointments will appear here -->
-    </div>
+            </div>
 
-</section>
+
+            <div class="quick-actions">
+
+                <a href="#doctors" class="quick-card">
+
+                    <div class="quick-icon doctor-icon">
+                        👨‍⚕️
+                    </div>
+
+                    <div>
+                        <h3>Find a Doctor</h3>
+                        <p>Search doctors by specialty</p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="#nurses" class="quick-card">
+
+                    <div class="quick-icon nurse-icon">
+                        👩‍⚕️
+                    </div>
+
+                    <div>
+                        <h3>Find a Nurse</h3>
+                        <p>Get professional nursing care</p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="#appointments" class="quick-card">
+
+                    <div class="quick-icon appointment-icon">
+                        📅
+                    </div>
+
+                    <div>
+                        <h3>My Appointments</h3>
+                        <p>View your upcoming visits</p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+
+                <a href="#emergency" class="quick-card emergency-card">
+
+                    <div class="quick-icon emergency-icon">
+                        🚑
+                    </div>
+
+                    <div>
+                        <h3>Emergency Help</h3>
+                        <p>Get urgent assistance</p>
+                    </div>
+
+                    <span class="arrow">→</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SPECIALIZATIONS ================= -->
+
+        <section class="specialization-section">
+
+            <div class="section-heading">
+
+                <span>EXPLORE</span>
+
+                <h2>
+                    Popular Specializations
+                </h2>
+
+                <p>
+                    Find specialists according to your healthcare needs.
+                </p>
+
+            </div>
+
+
+            <div class="specialization-grid">
+
+                <div class="specialization-card">
+                    <div class="specialization-image">❤️</div>
+                    <h3>Cardiology</h3>
+                    <p>Heart specialists</p>
+                </div>
+
+
+                <div class="specialization-card">
+                    <div class="specialization-image">🧠</div>
+                    <h3>Neurology</h3>
+                    <p>Brain & nervous system</p>
+                </div>
+
+
+                <div class="specialization-card">
+                    <div class="specialization-image">🩺</div>
+                    <h3>Dermatology</h3>
+                    <p>Skin specialists</p>
+                </div>
+
+
+                <div class="specialization-card">
+                    <div class="specialization-image">🦷</div>
+                    <h3>Dentistry</h3>
+                    <p>Dental care</p>
+                </div>
+
+
+                <div class="specialization-card">
+                    <div class="specialization-image">👁️</div>
+                    <h3>Ophthalmology</h3>
+                    <p>Eye specialists</p>
+                </div>
+
+
+                <div class="specialization-card">
+                    <div class="specialization-image">🦴</div>
+                    <h3>Orthopedics</h3>
+                    <p>Bone & joint care</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DOCTORS ================= -->
+
+        <section
+            id="doctors"
+            class="professionals-section"
+        >
+
+            <div class="section-heading">
+
+                <span>OUR PROFESSIONALS</span>
+
+                <h2>
+                    Meet Our Doctors
+                </h2>
+
+                <p>
+                    Connect with experienced medical professionals.
+                </p>
+
+            </div>
+
+
+            <div
+                id="doctorsList"
+                class="professionals-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- ================= NURSES ================= -->
+
+        <section
+            id="nurses"
+            class="professionals-section nurses-section"
+        >
+
+            <div class="section-heading">
+
+                <span>PROFESSIONAL CARE</span>
+
+                <h2>
+                    Our Nursing Team
+                </h2>
+
+                <p>
+                    Professional nursing support when you need it.
+                </p>
+
+            </div>
+
+
+            <!-- IMPORTANT: JavaScript renders nurses here -->
+
+            <div
+                id="nursesList"
+                class="professionals-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- ================= APPOINTMENTS ================= -->
+
+        <section
+            id="appointments"
+            class="appointments-section"
+        >
+
+            <div class="section-heading">
+
+                <span>YOUR HEALTHCARE</span>
+
+                <h2>
+                    Your Appointments
+                </h2>
+
+                <p>
+                    Keep track of your scheduled healthcare visits.
+                </p>
+
+            </div>
+
+
+            <div
+                id="appointmentsList"
+                class="appointments-container"
+            ></div>
+
+        </section>
+
+
+        <!-- ================= EMERGENCY ================= -->
+
+        <section
+            id="emergency"
+            class="emergency-section"
+        >
+
+            <div class="emergency-content">
+
+                <div class="emergency-icon-large">
+                    🚑
+                </div>
+
+
+                <div>
+
+                    <span>
+                        NEED URGENT HELP?
+                    </span>
+
+                    <h2>
+                        Emergency Assistance
+                    </h2>
+
+                    <p>
+                        Tap below to dispatch the nearest available
+                        ambulance to your location right away.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="sosButton"
+                    class="emergency-button"
+                    type="button"
+                >
+                    Request Ambulance
+                </button>
+
+            </div>
+
+
+            <div class="emergency-fleet-heading">
+
+                <span>RAPID RESPONSE</span>
+
+                <h2>
+                    Available Ambulances Near You
+                </h2>
+
+                <p>
+                    Pick the vehicle that matches the situation —
+                    fare is shown upfront, no surprises.
+                </p>
+
+            </div>
+
+
+            <div
+                id="ambulanceList"
+                class="ambulance-grid"
+            ></div>
+
+        </section>
+
     </main>
 
 
+    <!-- ================= FOOTER ================= -->
 
-    <div id="appointmentModal" class="modal">
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    ✚ SmartCare
+                </div>
+
+                <p>
+                    Making healthcare easier,
+                    simpler and more accessible.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#doctors">Doctors</a>
+
+                <a href="#nurses">Nurses</a>
+
+                <a href="#appointments">
+                    Appointments
+                </a>
+
+                <a href="#emergency">
+                    Emergency
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SmartCare. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= APPOINTMENT MODAL ================= -->
+
+    <div
+        id="appointmentModal"
+        class="modal"
+    >
 
         <div class="modal-content">
 
@@ -101,28 +562,30 @@
                 &times;
             </button>
 
-            <h2>Book Appointment</h2>
 
-            <!-- Selected Doctor -->
+            <h2>
+                Book Appointment
+            </h2>
+
 
             <div class="selected-doctor">
 
                 <h3 id="selectedDoctor">
-                    Doctor Name
+                    Professional Name
                 </h3>
 
                 <p id="selectedSpecialization">
                     Specialization
                 </p>
 
+                <p id="selectedRate" class="rate-line">
+                    Consultation Fee: ₹0
+                </p>
+
             </div>
 
 
-            <!-- Appointment Form -->
-
-            <form id="appointmentForm">
-
-                <!-- Patient Name -->
+            <form id="appointmentForm" class="styled-form">
 
                 <label for="patientName">
                     Patient Name
@@ -136,8 +599,6 @@
                 >
 
 
-                <!-- Appointment Date -->
-
                 <label for="appointmentDate">
                     Appointment Date
                 </label>
@@ -149,10 +610,8 @@
                 >
 
 
-                <!-- Appointment Time -->
-
                 <label for="appointmentTime">
-                    Appointment Time
+                    Available Time
                 </label>
 
                 <select
@@ -161,51 +620,50 @@
                 >
 
                     <option value="">
-                        Select time
-                    </option>
-
-                    <option value="09:00 AM">
-                        09:00 AM
-                    </option>
-
-                    <option value="10:00 AM">
-                        10:00 AM
-                    </option>
-
-                    <option value="11:00 AM">
-                        11:00 AM
-                    </option>
-
-                    <option value="12:00 PM">
-                        12:00 PM
-                    </option>
-
-                    <option value="02:00 PM">
-                        02:00 PM
-                    </option>
-
-                    <option value="03:00 PM">
-                        03:00 PM
-                    </option>
-
-                    <option value="04:00 PM">
-                        04:00 PM
-                    </option>
-
-                    <option value="05:00 PM">
-                        05:00 PM
+                        Select a time
                     </option>
 
                 </select>
 
 
-                <!-- Confirm -->
+                <label>
+                    Payment Method
+                </label>
+
+                <div class="payment-methods" id="appointmentPaymentMethods">
+
+                    <label class="payment-option selected">
+                        <input type="radio" name="appointmentPayment" value="Cash at Visit" checked>
+                        <span class="payment-icon">💵</span>
+                        Cash
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="appointmentPayment" value="UPI">
+                        <span class="payment-icon">📱</span>
+                        UPI
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="appointmentPayment" value="Card">
+                        <span class="payment-icon">💳</span>
+                        Card
+                    </label>
+
+                </div>
+
+
+                <div class="fee-summary">
+                    <span>Amount Payable</span>
+                    <span id="appointmentFeeDisplay">₹0</span>
+                </div>
+
 
                 <button
                     type="submit"
                     class="confirm-button"
                 >
-                    Confirm Appointment
+                    Confirm & Pay
                 </button>
 
             </form>
@@ -215,7 +673,143 @@
     </div>
 
 
+    <!-- ================= AMBULANCE MODAL ================= -->
 
+    <div
+        id="ambulanceModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                id="closeAmbulanceModal"
+                class="close-button"
+                type="button"
+            >
+                &times;
+            </button>
+
+
+            <h2>
+                Request an Ambulance
+            </h2>
+
+
+            <div class="selected-ambulance">
+
+                <h3 id="selectedAmbulance">
+                    Ambulance Type
+                </h3>
+
+                <p id="selectedAmbulanceInfo">
+                    ETA · Base Fare
+                </p>
+
+            </div>
+
+
+            <form id="ambulanceForm" class="styled-form">
+
+                <label for="ambulancePatientName">
+                    Patient Name
+                </label>
+
+                <input
+                    type="text"
+                    id="ambulancePatientName"
+                    placeholder="Who needs the ambulance?"
+                    required
+                >
+
+
+                <label for="ambulanceContact">
+                    Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="ambulanceContact"
+                    placeholder="10-digit mobile number"
+                    pattern="[0-9]{10}"
+                    required
+                >
+
+
+                <label for="pickupAddress">
+                    Pickup Address
+                </label>
+
+                <input
+                    type="text"
+                    id="pickupAddress"
+                    placeholder="House no., street, locality"
+                    required
+                >
+
+
+                <label for="distanceKm">
+                    Approx. Distance To Hospital (km)
+                </label>
+
+                <input
+                    type="number"
+                    id="distanceKm"
+                    min="1"
+                    max="80"
+                    value="5"
+                    required
+                >
+
+
+                <label>
+                    Payment Method
+                </label>
+
+                <div class="payment-methods" id="ambulancePaymentMethods">
+
+                    <label class="payment-option selected">
+                        <input type="radio" name="ambulancePayment" value="Cash on Arrival" checked>
+                        <span class="payment-icon">💵</span>
+                        Cash
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="ambulancePayment" value="UPI">
+                        <span class="payment-icon">📱</span>
+                        UPI
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="ambulancePayment" value="Card">
+                        <span class="payment-icon">💳</span>
+                        Card
+                    </label>
+
+                </div>
+
+
+                <div class="fee-summary">
+                    <span>Estimated Fare</span>
+                    <span id="ambulanceFareEstimate">₹0</span>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="confirm-button emergency-confirm"
+                >
+                    Dispatch Ambulance Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SUCCESS MESSAGE ================= -->
 
     <div
         id="successMessage"
@@ -224,11 +818,11 @@
 
         <div class="success-content">
 
-            <div class="success-icon">
+            <div id="successIcon" class="success-icon">
                 ✓
             </div>
 
-            <h2>
+            <h2 id="successTitle">
                 Appointment Confirmed
             </h2>
 
@@ -248,7 +842,18 @@
     </div>
 
 
-    
+    <!-- ================= EMERGENCY FAB ================= -->
+
+    <button
+        id="emergencyFab"
+        class="emergency-fab"
+        type="button"
+        title="Request emergency ambulance"
+        aria-label="Request emergency ambulance"
+    >
+        🚑
+    </button>
+
 
     <script src="js/script.js"></script>
 
